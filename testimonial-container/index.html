@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .testamonialC {
+        background-color: black;
+        border-radius: 10px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      img {
+        width: 100px;
+        border-radius: 100%;
+        height: 100px;
+      }
+      p {
+        width: 500px;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      h1 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testamonialC">
+      <img src="" alt="" />
+      <p class="testamonial"></p>
+      <h1 class="name"></h1>
+    </div>
+  </body>
+  <script>
+    let img1 = document.querySelector("img");
+    let test = document.querySelector(".testamonial");
+    let nameD = document.querySelector(".name");
+    const Data = [
+      {
+        name: "josheph Jenish",
+        img: "https://c8.alamy.com/comp/PG55RP/portrait-of-a-successful-business-man-isolated-on-white-PG55RP.jpg",
+        testimonial: ` I am beyond impressed with the exceptional quality and innovation that
+        apple brings to the mobile industry. Their commitment to fsf is evident
+        in every aspect of their products. I highly recommend apple to anyone
+        looking for cutting-edge technology.`,
+      },
+      {
+        name: "IndrajeetRawat",
+
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBvqzyx_zoi6q2c0Gd1XnE7wysD9PGOLe3-A&s",
+
+        testimonial:
+          "Switching to the new smartphone was the best decision I made this year! The seamless performance and intuitive design make everyday tasks a breeze. Highly recommend it to tech enthusiasts!",
+      },
+      {
+        name: "Sanchit Cristoper",
+
+        img: "https://thumbs.wbm.im/pw/small/6dc1cb1116b972bb2405441d4d590cd2.jpg",
+
+        testimonial:
+          "The online courses offered by LearnPro have revolutionized the way I study. The instructors are incredibly knowledgeable, and the platform is user-friendly. Perfect for anyone looking to upskill!",
+      },
+
+      {
+        name: "karan singhania",
+
+        img: "https://plus.unsplash.com/premium_photo-1689530775582-83b8abdb5020?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww",
+
+        testimonial:
+          "Adventure Travels made my dream vacation a reality. From planning to execution, every detail was taken care of. Truly a stress-free and memorable experience",
+      },
+    ];
+
+    let idx = 0;
+    update();
+    function update() {
+      let { name, img, testimonial } = Data[idx];
+
+      img1.src = img;
+      nameD.innerHTML = name;
+      test.innerHTML = testimonial;
+      idx++;
+
+      console.log(idx);
+      if (idx === Data.length) {
+        idx = 0;
+      }
+
+      setTimeout(() => {
+        update();
+      }, 10000);
+    }
+  </script>
+</html>
