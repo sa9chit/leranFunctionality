@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>digitCounter</h1>
+    <textarea placeholder="enter some keys" id="textarea" maxlength="150"></textarea>
+    <p class="counter">0</p>
+    <p class="left">150</p>
 </body>
+<script>
+let tex = document.getElementById("textarea")
+let counter = document.querySelector(".counter")
+let left = document.querySelector(".left")
+tex.addEventListener("keyup", (event)=>{
+updateVal()
+})
+function updateVal(){
+counter.innerText = tex.value.length
+left.innerText =  tex.getAttribute("maxlength")-tex.value.length
+
+}
+</script>
 </html>
