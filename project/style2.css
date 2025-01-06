@@ -1,0 +1,56 @@
+.data{
+    height: 80vh;
+    border-radius: 10px;
+    width: 60vw;
+    background-color: rgba(0, 0, 0, 0.815);
+    overflow: hidden;
+  position: absolute;
+  }
+  .d2{
+    position: relative;
+  }
+  .sidedata{
+    
+    
+    color: rgb(255, 255, 255);
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.871);
+    height: 26vw;
+    gap: 10vmin;
+
+  }
+  .discription{
+    position: absolute;
+    top: 10%;
+    width: 70%;
+    left: 24%;
+    text-align: center;
+
+  }
+  .dis{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+   
+    font-family: sans-serif;
+
+  }
+  .sidedata img{
+    width: 20%;
+    border-radius: 10px;
+  }
+
+  .data p{
+    color: white;
+    margin-top: 5vh;
+  }
+  .sum{
+    color: white;
+   height: 23vh;
+   text-align: center;
+padding: 1vh;
+   
+    background-color: rgba(79, 76, 76, 0.268);
+  }
+  

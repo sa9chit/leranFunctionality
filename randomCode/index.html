@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container{
+    display: flex;
+    flex-wrap: wrap;
+
+  
+    justify-content: center;
+grid-template-columns: repeat(3 , 1fr );
+
+
+
+}
+.containRandom{
+    width: 300px;
+    height: 300px;
+    
+    margin: 10px;
+    text-align: center;
+    font-size: larger;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+    </div>
+    <button class="loadMore"></button>
+</body>
+<script>
+    function codeGenrate(){
+       let digit = "012345679abcdef"
+       let digiL = 6
+       let want = ""
+    
+       for(let i = 0 ; i < digiL ; i++){
+        let random = Math.floor(Math.random()*digit.length)
+        want += digit.slice(random , random+1)
+       }
+       return want
+    }
+function addData(){
+    const con = document.querySelector(".container")
+    for(let i = 0 ; i < 10 ; i++){
+        let createEL = document.createElement("div")
+        createEL.classList.add("containRandom")
+        con.appendChild(createEL)
+    }
+    addClass()
+}
+function addClass(){
+    document.querySelectorAll(".containRandom").forEach((events)=>{
+events.style.backgroundColor = `#${codeGenrate()}`
+events.innerHTML = codeGenrate()
+})
+}
+function btn(){
+
+    let load = document.querySelector(".loadMore")
+load.addEventListener("click",()=>{
+    addData()
+
+})}
+
+btn()
+</script>
+
+</html>

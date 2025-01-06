@@ -1,0 +1,1 @@
+i am learning functionality of slider using vanilla js
